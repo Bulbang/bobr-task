@@ -4,21 +4,20 @@ header {
 }
 
 header article {
-    margin-top: 161px;
-    margin-left: 185px;
-    width: 720px;
-  
-  }
+  margin-top: 161px;
+  margin-left: 185px;
+  width: 720px;
+}
 
 .wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.logo{
-    position: absolute;
-    top: 24px;
-    left: calc(50% - 56.4px) ;
+.logo {
+  position: absolute;
+  top: 24px;
+  left: calc(50% - 56.4px);
 }
 
 nav {
@@ -26,15 +25,20 @@ nav {
   flex-direction: row;
   padding-left: 95px;
   padding-top: 65px;
-
 }
 
 .toggle {
   height: 20px;
+  margin-left: -26px;
 }
 
 .toggle:hover {
   cursor: pointer;
+}
+
+.toggle:active{
+    transform: rotate(-90deg);
+    transition: transform .3s ease;
 }
 
 nav article.nav {
@@ -43,26 +47,24 @@ nav article.nav {
   height: 547px;
   margin-left: -95px;
   margin-top: -65px;
-  
 
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 
-  background-image: url(./../img/nav-bg-ellipse.svg);
+  background-image: url("./../img/nav-bg-ellipse.svg");
   background-repeat: no-repeat;
 }
 
-nav article.nav.hidden{
-    transform: translate(-500px,-500px);
+nav article.nav.hidden {
+  transform: translate(-500px, -500px);
 }
 
-nav article.nav.open{
-    transform: translate(0px,0px);
-    
+nav article.nav.open {
+  transform: translate(0px, 0px);
 }
 
-article.nav .content{
-    opacity: 0;
-    transition: opacity .3s ease-out;
+article.nav .content {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 
 nav article.nav .nav-exit {
@@ -72,12 +74,16 @@ nav article.nav .nav-exit {
   margin-top: 49px;
 }
 
+.nav-exit:hover {
+  cursor: pointer;
+}
+
 nav ul.nav-regular {
   margin-left: 90px;
   list-style-type: none;
   display: flex;
 
-  font-family: Jost;
+  font-family: Jost, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -91,7 +97,7 @@ nav ul.nav-regular {
 
 nav article.nav ul.nav-regular {
   margin-left: 78px;
-  margin-top: 49px;
+  margin-top: 55px;
 }
 
 nav article.nav .wrapper {
@@ -111,7 +117,7 @@ nav ul.main-menu {
   margin-left: 92px;
   margin-top: 79px;
 
-  font-family: Jost;
+  font-family: Jost, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -122,26 +128,24 @@ nav ul.main-menu {
   text-transform: uppercase;
 }
 
-nav ul.main-menu li:first-child{
-    list-style-type: disc;
+nav ul.main-menu li:first-child {
+  list-style-type: disc;
 }
 
-ul.main-menu span{
-    font-weight: 300;
+ul.main-menu span {
+  font-weight: 300;
 }
 
-nav ul.main-menu a{
-    text-decoration: none;
+nav ul.main-menu a {
+  text-decoration: none;
 }
 
-ul.main-menu li{
- margin-top: 25px;
+ul.main-menu li {
+  margin-top: 25px;
 }
-
-
 
 header article h1 {
-  font-family: Jost;
+    font-family: Jost, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -155,7 +159,7 @@ header article h1 {
 header article h2 {
   margin-top: 20px;
 
-  font-family: Jost;
+  font-family: Jost, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -172,7 +176,7 @@ header article button {
   border: none;
   border-radius: 30px;
 
-  font-family: Jost;
+  font-family: Jost, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -208,13 +212,16 @@ header figure {
   background-image: url("./../img/header-boxes.svg");
 }
 
+@media screen and (min-width: 1023px) and (max-width: 1240px) {
+  nav ul.nav-regular {
+    margin-left: 45px;
+  }
 
-@media screen and (min-width: 1023px) and (max-width: 1240px){
-   nav ul.nav-regular{
-        margin-left: 45px;
-    }
+  header article {
+    margin-left: 100px;
+  }
 
-    header article{
-        margin-left: 100px;
-    }
+  nav article.nav ul.nav-regular{
+      margin-left: 33px;
+  }
 }
