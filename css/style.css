@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+.bg-gradient{
+    background: linear-gradient(90deg, #649EE1 0%, #91C2EC 50%);
+
+}
+
+.font-white{
+    color: #ffffff;
+}
+
+.font-blue{
+    color: #00467F;
+
+}
