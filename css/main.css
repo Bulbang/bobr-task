@@ -1,4 +1,152 @@
+main article.short-info {
+  position: relative;
+}
 
+main article.short-info h2 {
+  margin-top: 111px;
+  margin-left: 185px;
 
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 35px;
+  /* identical to box height, or 103% */
 
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
 
+main article.short-info figure.imgs {
+  display: flex;
+  margin-left: 125px;
+  margin-top: 59px;
+  flex-shrink: 1;
+}
+
+main article.short-info figure.imgs img:last-child {
+  margin-left: -140px;
+}
+
+main article.short-info figure.imgs img:first-child {
+  z-index: 1;
+  filter: drop-shadow(4px 4px 16px rgba(20, 57, 87, 0.25));
+}
+
+main article.short-info section {
+  margin-right: 85px;
+  width: 600px;
+}
+main article.short-info section h3 {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  /* identical to box height, or 120% */
+
+  text-transform: uppercase;
+}
+
+main article.short-info section p {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+
+  margin-top: 20px;
+}
+
+main article.short-info section ol {
+  margin-top: 67px;
+  margin-left: 60px;
+  list-style-type: none;
+}
+
+main article.short-info section li {
+  margin-bottom: 47px;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+main article.short-info section li figure {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+
+  left: -60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #00467f;
+}
+
+main article.short-info ul.links {
+  margin-top: 60px;
+  margin-left: 189px;
+  list-style-type: none;
+}
+
+main article.short-info ul.links a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+main article.short-info ul.links a img {
+  margin-right: 23px;
+}
+
+main article.short-info ul.links li:first-child {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  /* identical to box height, or 120% */
+
+  text-transform: uppercase;
+}
+
+main article.short-info ul.links li:last-child {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  /* identical to box height, or 120% */
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1240px) {
+  main article.short-info figure.imgs img:last-child {
+    width: calc(470px * 0.75);
+    margin-left: -70px;
+  }
+
+  main article.short-info figure.imgs img:first-child {
+    width: calc(250px * 0.75);
+  }
+  main article.short-info figure.imgs {
+    margin-left: calc(125px * 0.75);
+  }
+
+  main article.short-info section {
+    width: 300px;
+  }
+}

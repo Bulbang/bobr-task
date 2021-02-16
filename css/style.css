@@ -8,10 +8,18 @@ html, body{
     height: 100%;
 }
 
+.col{
+    
+    display: flex;
+    flex-direction: column;
+}
+
 .bg-gradient{
     background: linear-gradient(90deg, #649EE1 0%, #91C2EC 50%);
 
 }
+
+
 
 .font-white{
     color: #ffffff;
