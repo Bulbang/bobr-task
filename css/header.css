@@ -30,15 +30,16 @@ nav {
 .toggle {
   height: 20px;
   margin-left: -26px;
+  transition: transform .3s ease;
+
 }
 
 .toggle:hover {
   cursor: pointer;
 }
 
-.toggle:active{
-    transform: rotate(-90deg);
-    transition: transform .3s ease;
+.toggle.rotate{
+  transform: rotate(-90deg);
 }
 
 nav article.nav {
@@ -129,6 +130,10 @@ nav ul.main-menu {
 }
 
 nav ul.main-menu li:first-child {
+  list-style-type: disc;
+}
+
+nav ul.main-menu li:hover{
   list-style-type: disc;
 }
 
