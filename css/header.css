@@ -3,16 +3,23 @@ header {
   height: 740px;
 }
 
+:root {
+  --f-jost: "Jost", Arial, Helvetica, sans-serif;
+  --f-roboto: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 header article {
   margin-top: 161px;
   margin-left: 185px;
-  width: 720px;
+  flex: 1;
 }
 
 .wrapper {
   display: flex;
+}
 
-  justify-content: space-between;
+.wrapper-header {
+  display: flex;
 }
 
 .logo {
@@ -56,7 +63,7 @@ nav article.nav {
 }
 
 nav article.nav.hidden {
-  transform: translate(-500px, -500px);
+  transform: translate(-600px, -600px);
 }
 
 nav article.nav.open {
@@ -84,10 +91,10 @@ nav ul.nav-regular {
   list-style-type: none;
   display: flex;
 
-  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-family: var(--f-jost);
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 15px;
 
   display: flex;
@@ -118,10 +125,10 @@ nav ul.main-menu {
   margin-left: 92px;
   margin-top: 79px;
 
-  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-family: var(--f-jost);
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 20px;
 
   align-items: center;
@@ -129,9 +136,7 @@ nav ul.main-menu {
   text-transform: uppercase;
 }
 
-nav ul.main-menu li:first-child {
-  list-style-type: disc;
-}
+
 
 nav ul.main-menu li:hover {
   list-style-type: disc;
@@ -150,11 +155,11 @@ ul.main-menu li {
 }
 
 header article h1 {
-  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-family: var(--f-jost);
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
-  line-height: 55px;
+  font-size: 3rem;
+  line-height: 1.1458;
 
   display: flex;
   align-items: center;
@@ -164,10 +169,10 @@ header article h1 {
 header article h2 {
   margin-top: 20px;
 
-  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-family: var(--f-jost);
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 40px;
 }
 
@@ -181,10 +186,10 @@ header article button {
   border: none;
   border-radius: 30px;
 
-  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-family: var(--f-jost);
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 10px;
   /* or 62% */
 
@@ -212,9 +217,10 @@ header article button:focus {
 
 header figure {
   margin-top: -85px;
-  width: 625px;
+  flex: 1;
   height: 740px;
   background-image: url("./../img/header-boxes.svg");
+  background-size: cover;
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1240px) {
@@ -222,11 +228,233 @@ header figure {
     margin-left: 45px;
   }
 
+  .choise {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 340px;
+    left: calc(100% - 110px);
+  }
   header article {
     margin-left: 100px;
   }
 
   nav article.nav ul.nav-regular {
     margin-left: 33px;
+  }
+}
+
+/*MEDIA*/
+
+/*LAPTOPS 'N' HIGH SCREENS */
+@media screen and (min-width: 1241px) {
+}
+
+/* TABLETS */
+@media screen and (min-width: 1025px) and (max-width: 1240px) {
+  .toggle {
+    margin-left: -60px;
+    margin-top: -20px;
+  }
+
+  .choise {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 340px;
+    left: calc(100% - 110px);
+  }
+  nav article.nav .nav-exit{
+    margin-left: 30px;
+    margin-top: 35px;
+  }
+  ul.nav-regular li {
+    display: none;
+  }
+  .logo {
+    left: calc(100% - 122.8px);
+  }
+
+  nav ul.main-menu {
+    list-style-type: none;
+  }
+  nav article.nav ul.nav-regular{
+    margin-left: 17px;
+    margin-top: 35px;
+  }
+  nav article.nav{
+    z-index: 1;
+  }
+  article.nav ul.nav-regular li {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .wrapper-header {
+    display: inline-block;
+  }
+
+  header article{
+    margin-top: 60px;
+    margin-left: 40px;
+  }
+  header figure{
+    margin-top: 113px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    
+  }
+
+  header article h1{
+    font-size: 28px;
+  }
+
+  header article h2{
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .toggle {
+    margin-left: -60px;
+    margin-top: -20px;
+  }
+  .choise {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 340px;
+    left: calc(100% - 110px);
+  }
+
+  nav article.nav .nav-exit{
+    margin-left: 30px;
+    margin-top: 35px;
+  }
+  ul.nav-regular li {
+    display: none;
+  }
+  .logo {
+    left: calc(100% - 122.8px);
+  }
+
+  nav ul.main-menu {
+    list-style-type: none;
+  }
+  nav article.nav ul.nav-regular{
+    margin-left: 17px;
+    margin-top: 35px;
+  }
+  nav article.nav{
+    z-index: 1;
+  }
+  article.nav ul.nav-regular li {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .wrapper-header {
+    display: inline-block;
+  }
+
+  header article{
+    margin-top: 60px;
+    margin-left: 40px;
+  }
+  header figure{
+    margin-top: 113px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    
+  }
+
+  header article h1{
+    font-size: 28px;
+  }
+
+  header article h2{
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+ 
+}
+
+/* PHONES */
+@media screen and (max-width: 767px) {
+  .toggle {
+    margin-left: -80px;
+    margin-top: -40px;
+  }
+
+  .choise {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 340px;
+    left: calc(100% - 110px);
+  }
+  nav article.nav .nav-exit{
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+  ul.nav-regular li {
+    display: none;
+  }
+  .logo {
+    left: calc(100% - 122.8px);
+  }
+
+  nav ul.main-menu {
+    list-style-type: none;
+  }
+  nav article.nav ul.nav-regular{
+    margin-left: 17px;
+    margin-top: 15px;
+  }
+  nav article.nav{
+    z-index: 1;
+  }
+  article.nav ul.nav-regular li {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .wrapper-header {
+    display: inline-block;
+  }
+
+  header article{
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+  header figure{
+    margin-top: 113px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    
+  }
+
+  header article h1{
+    font-size: 28px;
+  }
+
+  header article h2{
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  header article button{
+    position: absolute;
+    top: 620px;
+    left: calc(50% - 125px);
   }
 }

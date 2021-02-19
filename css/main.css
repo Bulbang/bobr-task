@@ -9,7 +9,7 @@ main article.short-info h2 {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 34px;
+  font-size: 2.125rem;
   line-height: 35px;
   /* identical to box height, or 103% */
 
@@ -42,7 +42,7 @@ main article.short-info section h3 {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 30px;
   /* identical to box height, or 120% */
 
@@ -53,7 +53,7 @@ main article.short-info section p {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 25px;
 
   margin-top: 20px;
@@ -74,7 +74,7 @@ main article.short-info section li {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 25px;
 }
 
@@ -83,10 +83,13 @@ main article.short-info section li figure {
   height: 40px;
   width: 40px;
   margin-right: 20px;
+  padding-top: 2px;
+  padding-left: 1px;
 
   left: -60px;
 
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
 
@@ -117,7 +120,7 @@ main article.short-info ul.links li:first-child {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 30px;
   /* identical to box height, or 120% */
 
@@ -128,12 +131,12 @@ main article.short-info ul.links li:last-child {
   font-family: "Jost", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 30px;
   /* identical to box height, or 120% */
 }
 
-@media screen and (min-width: 1023px) and (max-width: 1240px) {
+@media screen and (max-width: 1023px) {
   main article.short-info figure.imgs img:last-child {
     width: calc(470px * 0.75);
     margin-left: -70px;
