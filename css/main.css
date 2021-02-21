@@ -23,6 +23,8 @@ main {
     "blog";
 }
 
+/*---- COMMON ----*/
+
 main figure {
   display: flex;
   align-items: center;
@@ -55,16 +57,46 @@ main .wrapper-content section {
   margin-left: calc(var(--base) * 9);
   max-width: 500px;
 }
-main .wrapper-content section.col{
+main .wrapper-content section.col {
   max-width: none;
 }
+
+main button {
+  width: calc(var(--base) * 60);
+  height: calc(var(--base) * 15);
+  margin-top: calc(var(--base) * 20);
+  border-radius: 30px;
+  background: #e0375f;
+  border: none;
+
+  font-family: var(--f-jost);
+  color: var(--f-white);
+  font-weight: 600;
+  font-size: calc(var(--base) * 4);
+  line-height: 10px;
+  /* or 62% */
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+main .row-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin: calc(var(--base) * 25) 0;
+}
+
+/*---- /COMMON ----*/
+
 /*---- short-info ----*/
 main article.short-info {
   grid-area: short-info;
   position: relative;
 }
-
-
 
 main article.short-info h2 {
   font-family: var(--f-jost);
@@ -251,11 +283,8 @@ main article.about-project .container .wrapper-content figure img:last-child {
   margin-top: -60px;
 }
 
-
-
 main article.about-project section p {
   margin-top: calc(var(--base) * 9);
-  
 }
 
 main article.about-project .row-wrapper {
@@ -270,11 +299,15 @@ main article.about-project .row-wrapper h3 {
   max-width: 600px;
 }
 
-
-main article.about-project .container .wrapper-content:last-child figure{
-  margin-left: calc(var(--base)*5);
+main article.about-project figure.img-right {
+  margin-left: calc(var(--base) * 9);
 }
-main article.about-project .container .wrapper-content:last-child figure img:last-child {
+main
+  article.about-project
+  .container
+  .wrapper-content:last-child
+  figure
+  img:last-child {
   margin-top: 60px;
   filter: drop-shadow(2px 4px 20px rgba(20, 57, 87, 0.25));
   z-index: 1;
@@ -286,7 +319,29 @@ main article.about-project .container .wrapper-content:last-child figure img:las
 main article.buy-glow-1 {
   grid-area: buy-glow-1;
   position: relative;
+  max-height: 520px;
 }
+
+main article.buy-glow-1 .wrapper-content figure {
+  background-image: url("./../img/buy-glow1-img.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main article.buy-glow-1 .wrapper-content section {
+  margin-left: auto;
+}
+
+main article.buy-glow-1 h3 {
+  color: var(--f-white);
+  text-align: left;
+}
+
 /*---- /buy-glow-1 ----*/
 
 /*---- vitamins ----*/
@@ -294,12 +349,61 @@ main article.vitamins {
   grid-area: vitamins;
   position: relative;
 }
+
+main article.vitamins p.vitamins {
+  font-family: var(--f-jost);
+  font-size: calc(var(--base) * 9);
+  color: var(--f-blue);
+  max-width: 600px;
+  text-align: center;
+}
+
+main article.vitamins .wrapper-content section.vitamins {
+  margin-top: calc(var(--base) * 13);
+}
+
+main article.vitamins .circle {
+  height: calc(var(--base) * 15);
+  width: calc(var(--base) * 15);
+  border-radius: 50%;
+}
+main article.vitamins img {
+  width: calc(var(--base) * 200);
+}
 /*---- /vitamins ----*/
 
 /*---- buy-glow-2 ----*/
 main article.buy-glow-2 {
   grid-area: buy-glow-2;
   position: relative;
+}
+
+main article.buy-glow-2 .temporary {
+  position: relative;
+  padding: calc(var(--base)*25);
+  width: 100%;
+}
+
+main article.buy-glow-2 .temporary figure {
+  background-image: url("./../img/buy-glow2-img.svg");
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main article.buy-glow-2 img{
+  margin-left: auto;
+  margin-top: calc(var(--base)*10);
+  width: calc(var(--base)*200);
+}
+
+main article.buy-glow-2 .temporary h3{
+  color: var(--f-white);
 }
 /*---- /buy-glow-2 ----*/
 
@@ -310,7 +414,6 @@ main article.blog {
 }
 /*---- /blog ----*/
 
-
 /*MEDIA*/
 
 /*LAPTOPS 'N' HIGH SCREENS */
@@ -319,15 +422,15 @@ main article.blog {
 
 /* TABLETS */
 @media screen and (min-width: 1025px) and (max-width: 1240px) {
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  iframe{width: 95%;}
-  :root{
-    --base:3px
+  iframe {
+    width: 95%;
   }
-
+  :root {
+    --base: 3px;
+  }
 }
 
 /* PHONES */
