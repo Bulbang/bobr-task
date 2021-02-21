@@ -380,8 +380,12 @@ main article.buy-glow-2 {
 
 main article.buy-glow-2 .temporary {
   position: relative;
-  padding: calc(var(--base)*25);
+  padding: calc(var(--base)*25) 0;
   width: 100%;
+}
+
+main article.buy-glow-2 .wrapper-content{
+  margin: 0;
 }
 
 main article.buy-glow-2 .temporary figure {
@@ -399,11 +403,15 @@ main article.buy-glow-2 .temporary figure {
 main article.buy-glow-2 img{
   margin-left: auto;
   margin-top: calc(var(--base)*10);
-  width: calc(var(--base)*200);
+  width: calc(var(--base)*180);
 }
 
 main article.buy-glow-2 .temporary h3{
   color: var(--f-white);
+}
+
+main article.buy-glow-2 section{
+  z-index: 1;
 }
 /*---- /buy-glow-2 ----*/
 
