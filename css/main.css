@@ -31,12 +31,7 @@ main figure {
   margin-left: calc(var(--base) * (-20));
 }
 
-main .wrapper-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: calc(var(--base) * 15);
-}
+
 
 main h3 {
   font-family: var(--f-jost);
@@ -90,6 +85,8 @@ main .row-wrapper {
   margin: calc(var(--base) * 25) 0;
 }
 
+
+
 /*---- /COMMON ----*/
 
 /*---- short-info ----*/
@@ -142,7 +139,7 @@ main article.short-info ul.socials li:first-child {
 }
 
 main article.short-info ul.socials a img {
-  width: 30px;
+  width: calc(var(--base)*7);
   margin-right: calc(var(--base) * 5);
 }
 
@@ -380,11 +377,11 @@ main article.buy-glow-2 {
 
 main article.buy-glow-2 .temporary {
   position: relative;
-  padding: calc(var(--base)*25) 0;
+  padding: calc(var(--base) * 25) 0;
   width: 100%;
 }
 
-main article.buy-glow-2 .wrapper-content{
+main article.buy-glow-2 .wrapper-content {
   margin: 0;
 }
 
@@ -400,18 +397,28 @@ main article.buy-glow-2 .temporary figure {
   width: 100%;
 }
 
-main article.buy-glow-2 img{
+main article.buy-glow-2 img {
   margin-left: auto;
-  margin-top: calc(var(--base)*10);
-  width: calc(var(--base)*180);
+  margin-top: calc(var(--base) * 10);
+  width: calc(var(--base) * 180);
 }
 
-main article.buy-glow-2 .temporary h3{
+main article.buy-glow-2 .temporary h3 {
   color: var(--f-white);
 }
 
-main article.buy-glow-2 section{
+main article.buy-glow-2 section {
   z-index: 1;
+}
+
+main article.buy-glow-2 img.plus {
+  width: calc(var(--base) * 15);
+  position: absolute;
+  bottom: calc(100% - var(--base)*7.5);
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  
 }
 /*---- /buy-glow-2 ----*/
 
@@ -419,6 +426,91 @@ main article.buy-glow-2 section{
 main article.blog {
   grid-area: blog;
   position: relative;
+}
+
+main article.blog h2 {
+  font-family: var(--f-jost);
+  font-size: calc(var(--base) * 8);
+  font-weight: 600;
+  color: var(--f-blue);
+  text-transform: var(--f-transform);
+}
+
+main article.blog h2 span{
+  font-family: var(--f-jost);
+  font-size: calc(var(--base) * 8);
+  font-weight: 300;
+  color: var(--f-blue);
+  text-transform: var(--f-transform);
+}
+
+section.blog {
+  margin-top: calc(var(--base)*25);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  
+  grid-gap: calc(var(--base)*5);
+}
+
+.blog-item{
+  position: relative;
+}
+
+.blog-item img{
+  width: 100%;
+}
+
+.blog-item p{
+  font-family: var(--f-jost);
+  font-weight: 500;
+  font-size: calc(var(--base) * 4);
+  color: var(--f-blue);
+}
+
+.blog-item a.audio{
+  display: none;
+  align-items: center;
+  margin-top: calc(var(--base)*3);
+}
+
+.blog-item a.audio img{
+  width: calc(var(--base)*5);
+}
+
+.blog-item a.audio span{
+  margin-left: var(--base);
+}
+
+.blog-item.audio a.audio{
+  display: flex;
+}
+
+.blog-item.interview {
+  grid-column: span 2;
+  grid-row: span 1;
+
+}
+
+.blog-item.interview a{
+  height: 100%;
+  width: 100%;
+}
+
+.blog-item.interview p{
+  position: absolute;
+  bottom: calc(var(--base)*7);
+  left: calc(var(--base)*7);
+  max-width: calc(var(--base)*120);
+  color: var(--f-white)
+}
+
+.blog-item.interview p span{
+  color: var(--f-white)
+}
+
+.blog-item.interview p span.title{
+  font-size: calc(var(--base)*3);
 }
 /*---- /blog ----*/
 

@@ -250,7 +250,7 @@ header figure {
 }
 
 /* TABLETS */
-@media screen and (min-width: 1025px) and (max-width: 1240px) {
+@media screen and (min-width: 1024px) and (max-width: 1240px) {
   .toggle {
     margin-left: -60px;
     margin-top: -20px;
@@ -317,7 +317,7 @@ header figure {
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .toggle {
     margin-left: -60px;
     margin-top: -20px;
