@@ -4,21 +4,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  /*---- Font vars ----*/
+  --f-jost: "Jost", Arial, Helvetica, sans-serif;
+  --f-roboto: "Roboto", Arial, Helvetica, sans-serif;
+  --f-blue: #00467f;
+  --f-white: #ffffff;
+  --f-transform: uppercase;
+  /*---- /Font vars ----*/
 
+  --base: 4px;
+}
+
+section{
+  align-self: center;
+  justify-self: center;
+}
 
 iframe{
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 html,
 body {
   height: 100%;
+  background:#fff;
 }
 
-.col {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .bg-gradient {
   background: linear-gradient(90deg, #649ee1 0%, #91c2ec 50%);
@@ -34,25 +47,15 @@ body {
 
 main article {
   padding: 120px 0;
+  grid-row-gap: calc(var(--base) * 10);
+  grid-column-gap: calc(var(--base) * 10);
 }
 
-.wrapper-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: calc(var(--base) * 15);
+
+.wrapper{
+  display: grid;
 }
 
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding-left: calc(var(--base) * 20);
-}
-
-.container-outer{
-  max-width: 1390px;
-  margin: 0 auto;
-}
 
 a {
   text-decoration: none;
@@ -62,10 +65,65 @@ ul {
   list-style-type: none;
 }
 
+button {
+  width: calc(var(--base) * 60);
+  height: calc(var(--base) * 15);
+  margin-top: calc(var(--base) * 20);
+  border-radius: 30px;
+  background: #e0375f;
+  border: none;
+
+  font-family: var(--f-jost);
+  color: var(--f-white);
+  font-weight: 600;
+  font-size: calc(var(--base) * 4);
+  line-height: 10px;
+  /* or 62% */
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 button:focus{
     outline: none;
 }
 
 button:hover{
     cursor: pointer;
+}
+
+h1{
+  font-family: var(--f-jost);
+  font-size: calc(var(--base)*12);
+  color: var(--f-white);
+  font-weight: 700;
+  font-style: normal;
+  text-transform: var(--f-transform);
+}
+
+h2{
+  margin-left: 15vw;
+}
+
+/*MEDIA*/
+
+/*LAPTOPS 'N' HIGH SCREENS */
+@media screen and (min-width: 1241px) {
+}
+
+/* TABLETS */
+@media screen and (min-width: 1025px) and (max-width: 1240px) {
+  
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  :root{
+    --base: 3px;
+  }
+}
+}
+
+/* PHONES */
+@media screen and (max-width: 767px) {
 }

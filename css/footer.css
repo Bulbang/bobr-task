@@ -1,23 +1,14 @@
-:root {
-  /*---- Font vars ----*/
-  --f-jost: "Jost", Arial, Helvetica, sans-serif;
-  --f-roboto: "Roboto", Arial, Helvetica, sans-serif;
-  --f-blue: #00467f;
-  --f-white: #ffffff;
-  --f-transform: uppercase;
-  /*---- /Font vars ----*/
 
-  --base: 4px;
-}
 
 footer {
   width: 100%;
-  padding: calc(var(--base) * 15) 0;
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: calc(var(--base) * 20);
+  grid-column-gap: calc(var(--base) * 30);
 }
 
-footer .wrapper-content {
-  align-items: flex-start;
-}
 
 footer ul.socials {
   list-style-type: none;
@@ -69,3 +60,13 @@ footer ul.nav-regular li {
 footer ul.nav-regular li a {
   color: var(--f-white);
 }
+
+footer ul.nav-regular li:last-child {
+  margin-left: 0;
+}
+
+footer img.footer-logo{
+  justify-self: center;
+  align-self: flex-start;
+}
+

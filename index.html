@@ -21,14 +21,13 @@
   </head>
   <body>
     <header class="bg-gradient">
-      <img src="./img/logo.svg" class="logo" alt="" />
-
-      <nav>
-        <img src="./img/toggle.svg" class="toggle" alt="" />
-        <article class="nav hidden">
-          <div class="content">
-            <div class="wrapper">
-              <img src="./img/nav-exit.svg" class="nav-exit" alt="" />
+      <aside class="">
+        <div class="nav-overlay">
+          <div class="nav-menu">
+            <div class="nav-header hidden">
+              <figure class="exit">
+                <img src="./img/nav-exit.svg" alt="" class="exit" />
+              </figure>
               <ul class="nav-regular">
                 <li>
                   <a href="javascript: void(0)" class="font-blue"
@@ -42,57 +41,59 @@
                 </li>
               </ul>
             </div>
-            <ul class="main-menu font-blue">
+            <div class="nav-body hidden">
+              <ul class="nav-expanded">
+                <li><a href="#">состав nfo glowbox</a></li>
+                <li><a href="#">о проекте</a></li>
+                <li><a href="#">конкурс</a></li>
+                <li><a href="#">NFO<span>x</span>Elle.ru</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+      
+      <div class="header-content">
+        <div class="wrapper">
+          <div class="main-menu">
+            <img src="./img/toggle.svg" alt="" class="toggle" />
+          </div>
+          <img src="./img/logo.svg" alt="" class="logo" /><img
+            src="./img/choise.svg"
+            alt=""
+            class="choise"
+          />
+          <nav>
+            <ul class="nav-regular">
               <li>
-                <a href="javascript: void(0)" class="font-blue">
-                  состав nfo glowbox
-                </a>
+                <a href="javascript: void(0)" class="font-blue"
+                  >Правила конкурса</a
+                >
               </li>
               <li>
-                <a href="javascript: void(0)" class="font-blue"> о проекте </a>
-              </li>
-              <li>
-                <a href="javascript: void(0)" class="font-blue"> конкурс </a>
-              </li>
-              <li>
-                <a href="javascript: void(0)" class="font-blue">
-                  NFO<span>x</span>Elle.ru
-                </a>
+                <a href="javascript: void(0)" class="font-blue"
+                  >Купить омега-3</a
+                >
               </li>
             </ul>
-          </div>
-        </article>
-        <ul class="nav-regular">
-          <li>
-            <a href="javascript: void(0)" class="font-white"
-              >Правила конкурса</a
-            >
-          </li>
-          <li>
-            <a href="javascript: void(0)" class="font-white">Купить омега-3</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="wrapper-header">
-        <article>
-          <h1 class="font-white">Сияй уверенностью с nFO GLOW BOX</h1>
-          <h2 class="font-white">
-            Прими участие в конкурсе и выиграй один из призов
-          </h2>
-          <button class="font-white">купить nfo glowbox</button>
-        </article>
-        <img src="./img/choise.svg" alt="" class="choise" />
-        <figure></figure>
+          </nav>
+          <section class="title">
+            <h1>Сияй уверенностью с nFO GLOW BOX</h1>
+            <p class="description">
+              Прими участие в конкурсе и выиграй один из призов
+            </p>
+            <button>купить nfo glowbox</button>
+          </section>
+        </div>
       </div>
+      <figure class="boxes"><img src="./img/header-boxes.svg" alt=""></figure>
     </header>
 
     <main>
       <!-- short-info -->
       <article class="short-info">
-        <div class="container">
           <h2>конкурс</h2>
-          <div class="wrapper-content">
-            <section class="col">
+            <section>
               <figure>
                 <img src="./img/main-short-info-img1.svg" alt="" />
                 <img src="./img/main-short-info-img2.svg" alt="" />
@@ -144,14 +145,14 @@
                 </li>
               </ul>
             </section>
-          </div>
-        </div>
+          
+        
       </article>
       <!-- /short-info -->
 
       <!-- prizes -->
       <article class="prizes">
-        <div class="container">
+        
           <h2>призы</h2>
           <ul class="prize-list">
             <li>
@@ -198,89 +199,92 @@
             </li>
           </ul>
           <button>купить nfo glowbox</button>
-        </div>
+        
       </article>
       <!-- /prizes -->
 
       <!-- about-project -->
       <article class="about-project">
-        <div class="container">
-          <h2>О проекте</h2>
-          <div class="wrapper-content">
-            <figure>
-              <img src="./img/about-proj-img1.svg" alt="" /><img
-                src="./img/about-proj-img2.svg"
-                alt=""
-              />
-            </figure>
-            <section>
-              <h3>#СияйуверенностьюNFO</h3>
-              <p>
-                <span
-                  >NFO вместе с популярным женским изданием Elle.ru запускает
-                  проект, посвященный женской красоте и уверенности. Мы
-                  убеждены, что все женщины разные, и каждая прекрасна
-                  по-своему. Здоровье и красота – главные составляющие женской
-                  уверенности и принятия своей уникальности.</span
-                >
-              </p>
-            </section>
-          </div>
-          <div class="row-wrapper">
-            <h3>
-              Для нас важно, чтобы каждая женщина могла для себя только самое
-              лучшее, поэтому мы создали специально для вас сияющий NFO Glow Box
-            </h3>
-          </div>
+            <h2>О проекте</h2>
+            
+              <figure>
+                <img src="./img/about-proj-img1.svg" alt="" /><img
+                  src="./img/about-proj-img2.svg"
+                  alt=""
+                />
+              </figure>
+              <section>
+                <h3>#СияйуверенностьюNFO</h3>
+                <p>
+                  <span
+                    >NFO вместе с популярным женским изданием Elle.ru запускает
+                    проект, посвященный женской красоте и уверенности. Мы
+                    убеждены, что все женщины разные, и каждая прекрасна
+                    по-своему. Здоровье и красота – главные составляющие женской
+                    уверенности и принятия своей уникальности.</span
+                  >
+                </p>
+              </section>
+           
+            
+              <h3>
+                Для нас важно, чтобы каждая женщина могла для себя только самое
+                лучшее, поэтому мы создали специально для вас сияющий NFO Glow
+                Box
+              </h3>
+            
+          
+
           <iframe
-            width="100%"
-            height="720"
-            src="https://www.youtube.com/embed/PHNfquhK0mQ"
+            
+            
+            src="https://www.youtube.com/embed/bIvWHzqygWo"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-          <div class="wrapper-content">
-            <section>
-              <h3>#СияйуверенностьюNFO</h3>
-              <p>
-                <span
-                  >Уверенность – важная часть настоящей женщины. Любить себя
-                  такой, какая ты есть, заботиться о своем здоровье и красоте –
-                  это то, что делает каждую женщину прекрасной.
-                </span>
-                <br />
-                <br />
-                <span
-                  >Вместе с одним из самых известных и уважаемых женских изданий
-                  мы решили раскрыть тему женской уверенности и уникальности,
-                  поговорить с экспертами и вдохновить вас.</span
-                >
-              </p>
-            </section>
-            <figure class="img-right">
-              <img src="./img/about-proj-img3.svg" alt="" /><img
-                src="./img/about-proj-img4.svg"
-                alt=""
-              />
-            </figure>
+          
+            
+              <section>
+                <h3>#СияйуверенностьюNFO</h3>
+                <p>
+                  <span
+                    >Уверенность – важная часть настоящей женщины. Любить себя
+                    такой, какая ты есть, заботиться о своем здоровье и красоте
+                    – это то, что делает каждую женщину прекрасной.
+                  </span>
+                  <br />
+                  <br />
+                  <span
+                    >Вместе с одним из самых известных и уважаемых женских
+                    изданий мы решили раскрыть тему женской уверенности и
+                    уникальности, поговорить с экспертами и вдохновить
+                    вас.</span
+                  >
+                </p>
+              </section>
+              <figure class="img-right">
+                <img src="./img/about-proj-img3.svg" alt="" /><img
+                  src="./img/about-proj-img4.svg"
+                  alt=""
+                />
+              </figure>
+            
+            <img src="./img/choise.svg" alt="" class="choise" />
+            
+              <h3>
+                Каждую неделю на сайте Elle.ru в разделе спецпроекта NFO вы
+                найдете статьи от экспертов красоты и здоровья, полезные
+                материалы и многое другое
+              </h3>
+            
           </div>
-          <div class="row-wrapper"><img src="./img/choise.svg" alt="" /></div>
-          <div class="row-wrapper">
-            <h3>
-              Каждую неделю на сайте Elle.ru в разделе спецпроекта NFO вы
-              найдете статьи от экспертов красоты и здоровья, полезные материалы
-              и многое другое
-            </h3>
-          </div>
-        </div>
+        
       </article>
       <!-- /about-project -->
 
       <!-- buy-glow-1 -->
       <article class="buy-glow-1 bg-gradient">
-        <div class="container">
-          <div class="wrapper-content">
             <figure></figure>
             <section>
               <h3>
@@ -289,21 +293,17 @@
               </h3>
               <button>купить nfo glowbox</button>
             </section>
-          </div>
-        </div>
+          
       </article>
       <!-- /buy-glow-1 -->
 
       <!-- vitamins -->
       <article class="vitamins">
-        <div class="container">
-          <div class="row-wrapper">
+
             <p class="vitamins">
               NORWEGIAN Fish Oil – это совершенная Омега-3, витамины и минералы
               из Скандинавии
             </p>
-          </div>
-          <div class="wrapper-content">
             <img src="./img/vitamins.svg" alt="" />
             <section>
               <section class="vitamins">
@@ -327,8 +327,7 @@
                 </span>
               </section>
             </section>
-          </div>
-        </div>
+        
       </article>
       <!-- /vitamins -->
 
@@ -336,8 +335,7 @@
       <article class="buy-glow-2">
         <div class="temporary bg-gradient">
           <img src="./img/plus.svg" alt="" class="plus" />
-          <div class="container">
-            <div class="wrapper-content">
+          
               <section>
                 <h3>
                   В каждом GlowBox вас ждут приятные бонусы и подарки от NFO.
@@ -347,21 +345,20 @@
               </section>
 
               <figure><img src="./img/buy-glow2-glowbox.svg" alt="" /></figure>
-            </div>
-          </div>
+            
         </div>
       </article>
       <!-- /buy-glow-2 -->
 
       <!-- blog -->
       <article class="blog">
-        <div class="container-outer">
-          <div class="container">
+        
+          
             <h2>
               О женской уверенности. <br />
               NFO<span>x</span>Elle.ru
             </h2>
-          </div>
+          
           <section class="blog">
             <div class="blog-item audio">
               <a href="#">
@@ -399,7 +396,7 @@
                 ></a
               >
             </div>
-            <div class="blog-item interview">
+            <div class="blog-item big">
               <a href="#">
                 <img src="./img/blog-imgs/blog-imb-interview.svg" alt="" />
 
@@ -411,7 +408,7 @@
                 </p></a
               >
             </div>
-            <div class="blog-item interview">
+            <div class="blog-item big">
               <a href="#">
                 <img src="./img/blog-imgs/blog-imb-interview.svg" alt="" />
                 <p>
@@ -458,7 +455,7 @@
                 ></a
               >
             </div>
-            <div class="blog-item interview">
+            <div class="blog-item big">
               <a href="#">
                 <img src="./img/blog-imgs/blog-imb-interview.svg" alt="" />
                 <p>
@@ -505,7 +502,7 @@
                 ></a
               >
             </div>
-            <div class="blog-item interview">
+            <div class="blog-item big">
               <a href="#">
                 <img src="./img/blog-imgs/blog-imb-interview.svg" alt="" />
                 <p>
@@ -516,7 +513,7 @@
                 </p></a
               >
             </div>
-            <div class="blog-item interview">
+            <div class="blog-item big">
               <a href="#">
                 <img src="./img/blog-imgs/blog-imb-interview.svg" alt="" />
                 <p>
@@ -528,15 +525,15 @@
               >
             </div>
           </section>
-        </div>
+        
       </article>
       <!-- /blog -->
     </main>
 
     <footer class="bg-gradient">
-      <div class="container">
-        <div class="wrapper-content">
-          <img src="./img/logo.svg" alt="" />
+      
+        
+          <img src="./img/logo.svg" alt="" class="footer-logo"/>
           <section>
             <ul class="socials">
               <li>
@@ -564,8 +561,8 @@
               </li>
             </ul>
           </section>
-        </div>
-      </div>
+        
+      
     </footer>
 
     <script src="./js/header.js"></script>

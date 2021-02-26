@@ -1,15 +1,3 @@
-:root {
-  /*---- Font vars ----*/
-  --f-jost: "Jost", Arial, Helvetica, sans-serif;
-  --f-roboto: "Roboto", Arial, Helvetica, sans-serif;
-  --f-blue: #00467f;
-  --f-white: #ffffff;
-  --f-transform: uppercase;
-  /*---- /Font vars ----*/
-
-  --base: 4px;
-}
-
 main {
   display: grid;
   grid-template-rows: auto;
@@ -28,10 +16,7 @@ main {
 main figure {
   display: flex;
   align-items: center;
-  margin-left: calc(var(--base) * (-20));
 }
-
-
 
 main h3 {
   font-family: var(--f-jost);
@@ -48,44 +33,28 @@ main span {
   color: var(--f-blue);
 }
 
-main .wrapper-content section {
+main  section {
   margin-left: calc(var(--base) * 9);
   max-width: 500px;
 }
-main .wrapper-content section.col {
+
+main figure{
+  align-self: center;
+  justify-self: center;
+}
+
+main section.col {
   max-width: none;
 }
 
-main button {
-  width: calc(var(--base) * 60);
-  height: calc(var(--base) * 15);
-  margin-top: calc(var(--base) * 20);
-  border-radius: 30px;
-  background: #e0375f;
-  border: none;
-
-  font-family: var(--f-jost);
-  color: var(--f-white);
-  font-weight: 600;
-  font-size: calc(var(--base) * 4);
-  line-height: 10px;
-  /* or 62% */
-
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+main ul{
+  margin-left: 1vw;
 }
 
-main .row-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  margin: calc(var(--base) * 25) 0;
+iframe {
+  width: 1024px;
+  height: 720px;
 }
-
-
 
 /*---- /COMMON ----*/
 
@@ -93,6 +62,10 @@ main .row-wrapper {
 main article.short-info {
   grid-area: short-info;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 0;
 }
 
 main article.short-info h2 {
@@ -101,6 +74,7 @@ main article.short-info h2 {
   font-weight: 600;
   color: var(--f-blue);
   text-transform: var(--f-transform);
+  grid-column: span 2;
 }
 
 main article.short-info p {
@@ -109,10 +83,12 @@ main article.short-info p {
 
 main article.short-info figure img:first-child {
   filter: drop-shadow(4px 4px 16px rgba(20, 57, 87, 0.25));
+  width: calc(var(--base)*60);
 }
 
 main article.short-info figure img:last-child {
-  margin-left: -140px;
+  width: calc(var(--base)*115);
+  margin-left: calc(var(--base)* (-35));
 }
 
 main article.short-info ul.socials {
@@ -139,7 +115,7 @@ main article.short-info ul.socials li:first-child {
 }
 
 main article.short-info ul.socials a img {
-  width: calc(var(--base)*7);
+  width: calc(var(--base) * 7);
   margin-right: calc(var(--base) * 5);
 }
 
@@ -190,6 +166,9 @@ main article.prizes {
   background-image: url("./../img/prizes-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main article.prizes h2 {
@@ -201,6 +180,7 @@ main article.prizes h2 {
 }
 
 main article.prizes ul.prize-list {
+  margin-left: 12vw;
   display: flex;
   flex-wrap: wrap;
   max-width: 60%;
@@ -237,6 +217,7 @@ main article.prizes button {
   width: calc(var(--base) * 60);
   height: calc(var(--base) * 15);
   margin-top: calc(var(--base) * 20);
+  margin-left: 12vw;
   border-radius: 30px;
   background: #e0375f;
   border: none;
@@ -260,6 +241,10 @@ main article.prizes button {
 main article.about-project {
   grid-area: about-project;
   position: relative;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto auto 1fr auto auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 main article.about-project h2 {
@@ -268,47 +253,53 @@ main article.about-project h2 {
   font-weight: 600;
   color: var(--f-blue);
   text-transform: var(--f-transform);
+  grid-column: span 2;
 }
 
-main article.about-project .container .wrapper-content figure img:first-child {
+main article.about-project figure img:first-child {
   z-index: 1;
+  width: calc(var(--base)*60);
   filter: drop-shadow(2px 4px 25px rgba(20, 57, 87, 0.25));
 }
 
-main article.about-project .container .wrapper-content figure img:last-child {
-  margin-left: -90px;
-  margin-top: -60px;
+main article.about-project figure img:last-child {
+  width: calc(var(--base)*100);
+  margin-left: calc(var(--base)*(-20));
+  margin-top: calc(var(--base)*(-15));
 }
 
 main article.about-project section p {
   margin-top: calc(var(--base) * 9);
 }
 
-main article.about-project .row-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  margin: calc(var(--base) * 25) 0;
-}
-
-main article.about-project .row-wrapper h3 {
+main article.about-project h3 {
   max-width: 600px;
+  grid-column: span 2;
+  margin: 0 auto;
+  text-align: center;
 }
 
-main article.about-project figure.img-right {
-  margin-left: calc(var(--base) * 9);
+iframe {
+  grid-column: span 2;
 }
-main
-  article.about-project
-  .container
-  .wrapper-content:last-child
-  figure
-  img:last-child {
+
+main article.about-project img.choise {
+  position: static;
+  grid-column: span 2;
+  margin: 0 auto;
+}
+
+main article.about-project figure.img-right img:first-child {
+  width: calc(var(--base)*100);
+}
+
+main article.about-project figure.img-right img:last-child {
+  width: calc(var(--base)*60);
   margin-top: 60px;
   filter: drop-shadow(2px 4px 20px rgba(20, 57, 87, 0.25));
   z-index: 1;
 }
+
 
 /*---- /about-project ----*/
 
@@ -317,9 +308,11 @@ main article.buy-glow-1 {
   grid-area: buy-glow-1;
   position: relative;
   max-height: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-main article.buy-glow-1 .wrapper-content figure {
+main article.buy-glow-1  figure {
   background-image: url("./../img/buy-glow1-img.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -330,13 +323,21 @@ main article.buy-glow-1 .wrapper-content figure {
   width: 100%;
 }
 
-main article.buy-glow-1 .wrapper-content section {
-  margin-left: auto;
+main article.buy-glow-1 section {
+  grid-column: 2;
 }
 
 main article.buy-glow-1 h3 {
+  margin-right: 2px;
   color: var(--f-white);
   text-align: left;
+  z-index: 200;
+}
+main article.buy-glow-1 button{
+  z-index: 200;
+}
+main article.buy-glow-1 figure{
+  margin-left: -60px;
 }
 
 /*---- /buy-glow-1 ----*/
@@ -345,6 +346,8 @@ main article.buy-glow-1 h3 {
 main article.vitamins {
   grid-area: vitamins;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main article.vitamins p.vitamins {
@@ -352,10 +355,12 @@ main article.vitamins p.vitamins {
   font-size: calc(var(--base) * 9);
   color: var(--f-blue);
   max-width: 600px;
+  margin: 0 auto;
   text-align: center;
+  grid-column: span 2;
 }
 
-main article.vitamins .wrapper-content section.vitamins {
+main article.vitamins  section.vitamins {
   margin-top: calc(var(--base) * 13);
 }
 
@@ -363,9 +368,13 @@ main article.vitamins .circle {
   height: calc(var(--base) * 15);
   width: calc(var(--base) * 15);
   border-radius: 50%;
+  background: var(--f-white);
+  color:var(--f-blue);
 }
 main article.vitamins img {
   width: calc(var(--base) * 200);
+  align-self: center;
+  justify-self: center;
 }
 /*---- /vitamins ----*/
 
@@ -373,15 +382,18 @@ main article.vitamins img {
 main article.buy-glow-2 {
   grid-area: buy-glow-2;
   position: relative;
+  padding: 120px 0;
 }
 
 main article.buy-glow-2 .temporary {
   position: relative;
-  padding: calc(var(--base) * 25) 0;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 120px 0;
 }
 
-main article.buy-glow-2 .wrapper-content {
+main article.buy-glow-2  {
   margin: 0;
 }
 
@@ -414,11 +426,10 @@ main article.buy-glow-2 section {
 main article.buy-glow-2 img.plus {
   width: calc(var(--base) * 15);
   position: absolute;
-  bottom: calc(100% - var(--base)*7.5);
+  bottom: calc(100% - var(--base) * 7.5);
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 2;
-  
 }
 /*---- /buy-glow-2 ----*/
 
@@ -436,7 +447,7 @@ main article.blog h2 {
   text-transform: var(--f-transform);
 }
 
-main article.blog h2 span{
+main article.blog h2 span {
   font-family: var(--f-jost);
   font-size: calc(var(--base) * 8);
   font-weight: 300;
@@ -445,72 +456,73 @@ main article.blog h2 span{
 }
 
 section.blog {
-  margin-top: calc(var(--base)*25);
+  margin-top: calc(var(--base) * 25);
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
-  
-  grid-gap: calc(var(--base)*5);
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: calc(var(--base)*4);
+  margin-right: calc(var(--base)*4);
+
+  grid-gap: calc(var(--base) * 5);
+  max-width: 100%;
 }
 
-.blog-item{
+.blog-item {
   position: relative;
 }
 
-.blog-item img{
+.blog-item img {
   width: 100%;
 }
 
-.blog-item p{
+.blog-item p {
   font-family: var(--f-jost);
   font-weight: 500;
   font-size: calc(var(--base) * 4);
   color: var(--f-blue);
 }
 
-.blog-item a.audio{
+.blog-item a.audio {
   display: none;
   align-items: center;
-  margin-top: calc(var(--base)*3);
+  margin-top: calc(var(--base) * 3);
 }
 
-.blog-item a.audio img{
-  width: calc(var(--base)*5);
+.blog-item a.audio img {
+  width: calc(var(--base) * 5);
 }
 
-.blog-item a.audio span{
+.blog-item a.audio span {
   margin-left: var(--base);
 }
 
-.blog-item.audio a.audio{
+.blog-item.audio a.audio {
   display: flex;
 }
 
-.blog-item.interview {
+.blog-item.big {
   grid-column: span 2;
   grid-row: span 1;
-
 }
 
-.blog-item.interview a{
+.blog-item.big a {
   height: 100%;
   width: 100%;
 }
 
-.blog-item.interview p{
+.blog-item.big p {
   position: absolute;
-  bottom: calc(var(--base)*7);
-  left: calc(var(--base)*7);
-  max-width: calc(var(--base)*120);
-  color: var(--f-white)
+  bottom: calc(var(--base) * 7);
+  left: calc(var(--base) * 7);
+  color: var(--f-white);
 }
 
-.blog-item.interview p span{
-  color: var(--f-white)
+.blog-item.big p span {
+  color: var(--f-white);
 }
 
-.blog-item.interview p span.title{
-  font-size: calc(var(--base)*3);
+.blog-item.big p span.title {
+  font-size: calc(var(--base) * 3);
 }
 /*---- /blog ----*/
 
@@ -525,12 +537,15 @@ section.blog {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  iframe {
-    width: 95%;
+  main article.vitamins p.vitamins {
+    max-width: 450px;
   }
-  :root {
-    --base: 3px;
+  main article.about-project  h3 {
+    max-width: 450px;
   }
+
+  
+  
 }
 
 /* PHONES */

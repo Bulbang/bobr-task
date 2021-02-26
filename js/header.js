@@ -1,20 +1,45 @@
-const toggleBar = document.querySelector('.toggle')
-const navExit = document.querySelector('.nav-exit')
-let menu = document.getElementsByTagName('article')[0]
+let aside = document.getElementsByTagName("aside")[0];
+let navContent1 = document.querySelector(".nav-header");
+let navContent2 = document.querySelector(".nav-body");
+let navOverlay = document.querySelector(".nav-overlay");
+let navToggle = document.querySelector(".toggle");
+const navExit = document.querySelector(".exit");
+const ANIM_SPEED = 500;
+let openBool = false;
 
-toggleBar.addEventListener('click', () =>{
-    document.querySelector('.toggle').classList.add("rotate")
-    menu.classList.add('open')
-    menu.classList.remove('hidden')
-    setTimeout("document.querySelector('.content').style.opacity = 1", 500)
-})
+function close() {
+  if (!openBool) {
+    navContent1.classList.add("hidden");
+    navContent2.classList.add("hidden");
+    setTimeout(() => {
+      aside.classList.remove("open");
+      aside.classList.add("hide");
+    }, ANIM_SPEED);
+    setTimeout(() => {
+      aside.classList.remove("hide");
+      navToggle.classList.remove('rotate')
+    }, ANIM_SPEED * 2);
+  }
+}
 
-navExit.addEventListener('click', () => {
-    
-    document.querySelector('.content').style.opacity = 0
-    setTimeout("menu.classList.remove('open')",300)
-    setTimeout("menu.classList.add('hidden')",300)
-    setTimeout("document.querySelector('.toggle').classList.remove('rotate')",500)
-    
-})
+function open() {
+  openBool = true;
+  aside.classList.add("open");
+  navToggle.classList.add('rotate')
+  setTimeout(() => {
+    navContent1.classList.remove("hidden");
+    navContent2.classList.remove("hidden");
+    openBool = false;
+  }, ANIM_SPEED);
+}
+navToggle.addEventListener("click", () => {
+  open();
+});
 
+navExit.addEventListener("click", () => {
+  close();
+});
+
+navOverlay.addEventListener("click", () => {
+  close();
+});
