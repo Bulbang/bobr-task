@@ -33,12 +33,12 @@ main span {
   color: var(--f-blue);
 }
 
-main  section {
+main section {
   margin-left: calc(var(--base) * 9);
   max-width: 500px;
 }
 
-main figure{
+main figure {
   align-self: center;
   justify-self: center;
 }
@@ -47,13 +47,13 @@ main section.col {
   max-width: none;
 }
 
-main ul{
+main ul {
   margin-left: 1vw;
 }
 
 iframe {
-  width: 1024px;
-  height: 720px;
+  width: 100%;
+  height: 100vh;
 }
 
 /*---- /COMMON ----*/
@@ -83,17 +83,18 @@ main article.short-info p {
 
 main article.short-info figure img:first-child {
   filter: drop-shadow(4px 4px 16px rgba(20, 57, 87, 0.25));
-  width: calc(var(--base)*60);
+  width: calc(var(--base) * 60);
 }
 
 main article.short-info figure img:last-child {
-  width: calc(var(--base)*115);
-  margin-left: calc(var(--base)* (-35));
+  width: calc(var(--base) * 115);
+  margin-left: calc(var(--base) * (-35));
 }
 
 main article.short-info ul.socials {
   list-style-type: none;
   margin-top: calc(var(--base) * 10);
+  justify-self: center;
 }
 
 main article.short-info ul.socials li {
@@ -129,6 +130,10 @@ main article.short-info h3 {
 
 main article.short-info ul.instruct {
   list-style-type: none;
+}
+
+main.short-info section {
+  grid-row: span 2;
 }
 
 main article.short-info ul.instruct li {
@@ -168,7 +173,12 @@ main article.prizes {
   background-repeat: no-repeat;
 
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: repeat(4, auto);
+}
+
+main article.prizes img.prize-box {
+  width: 100%;
+  display: none;
 }
 
 main article.prizes h2 {
@@ -258,14 +268,14 @@ main article.about-project h2 {
 
 main article.about-project figure img:first-child {
   z-index: 1;
-  width: calc(var(--base)*60);
+  width: calc(var(--base) * 60);
   filter: drop-shadow(2px 4px 25px rgba(20, 57, 87, 0.25));
 }
 
 main article.about-project figure img:last-child {
-  width: calc(var(--base)*100);
-  margin-left: calc(var(--base)*(-20));
-  margin-top: calc(var(--base)*(-15));
+  width: calc(var(--base) * 100);
+  margin-left: calc(var(--base) * (-20));
+  margin-top: calc(var(--base) * (-15));
 }
 
 main article.about-project section p {
@@ -290,16 +300,15 @@ main article.about-project img.choise {
 }
 
 main article.about-project figure.img-right img:first-child {
-  width: calc(var(--base)*100);
+  width: calc(var(--base) * 100);
 }
 
 main article.about-project figure.img-right img:last-child {
-  width: calc(var(--base)*60);
+  width: calc(var(--base) * 60);
   margin-top: 60px;
   filter: drop-shadow(2px 4px 20px rgba(20, 57, 87, 0.25));
   z-index: 1;
 }
-
 
 /*---- /about-project ----*/
 
@@ -312,7 +321,7 @@ main article.buy-glow-1 {
   grid-template-columns: 1fr 1fr;
 }
 
-main article.buy-glow-1  figure {
+main article.buy-glow-1 figure {
   background-image: url("./../img/buy-glow1-img.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -333,10 +342,10 @@ main article.buy-glow-1 h3 {
   text-align: left;
   z-index: 200;
 }
-main article.buy-glow-1 button{
+main article.buy-glow-1 button {
   z-index: 200;
 }
-main article.buy-glow-1 figure{
+main article.buy-glow-1 figure {
   margin-left: -60px;
 }
 
@@ -360,7 +369,7 @@ main article.vitamins p.vitamins {
   grid-column: span 2;
 }
 
-main article.vitamins  section.vitamins {
+main article.vitamins section.vitamins {
   margin-top: calc(var(--base) * 13);
 }
 
@@ -369,7 +378,7 @@ main article.vitamins .circle {
   width: calc(var(--base) * 15);
   border-radius: 50%;
   background: var(--f-white);
-  color:var(--f-blue);
+  color: var(--f-blue);
 }
 main article.vitamins img {
   width: calc(var(--base) * 200);
@@ -393,7 +402,7 @@ main article.buy-glow-2 .temporary {
   padding: 120px 0;
 }
 
-main article.buy-glow-2  {
+main article.buy-glow-2 {
   margin: 0;
 }
 
@@ -460,8 +469,8 @@ section.blog {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-left: calc(var(--base)*4);
-  margin-right: calc(var(--base)*4);
+  margin-left: calc(var(--base) * 4);
+  margin-right: calc(var(--base) * 4);
 
   grid-gap: calc(var(--base) * 5);
   max-width: 100%;
@@ -540,14 +549,105 @@ section.blog {
   main article.vitamins p.vitamins {
     max-width: 450px;
   }
-  main article.about-project  h3 {
+  main article.about-project h3 {
     max-width: 450px;
   }
-
-  
-  
 }
 
 /* PHONES */
 @media screen and (max-width: 767px) {
+  main article.short-info {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  main article.short-info h2 {
+    grid-column: span 1;
+  }
+
+  main article.short-info section {
+    margin-left: 0;
+    max-width: 320px;
+    justify-self: flex-start;
+    grid-row: 2 / span 1;
+    grid-column: span 1;
+  }
+  main article.short-info figure {
+    justify-self: flex-start;
+    grid-row: 3 / span 1;
+    grid-column: span 1;
+  }
+  main article.short-info ul.socials {
+    justify-self: flex-start;
+    grid-row: 4 / span 1;
+    grid-column: span 1;
+  }
+
+  main article.prizes {
+    padding-bottom: 0;
+    background-image: none;
+    background: linear-gradient(180deg, #649ee1 30.8%, #91c2ec 78.02%);
+  }
+  main article.prizes button {
+    display: none;
+  }
+
+  main article.prizes img.prize-box {
+    display: block;
+  }
+
+  main article.prizes ul.prize-list {
+    margin-left: 12vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 60%;
+  }
+
+  main article.about-project {
+    grid-template-rows: repeat(9, auto);
+    grid-template-columns: 1fr;
+    
+  }
+
+  main article.about-project h2 {
+    grid-row: 1 / span 1;
+    grid-column: span 2;
+  }
+  main article.about-project section:first-child{
+    grid-row: 2 / span 1;
+    grid-column:1 / span 2
+  }
+  main article.about-project figure:first-child {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+  
+  main article.about-project h3:first-child{
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+  }
+  main article.about-project iframe{
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 2;
+  }
+  main article.about-project section:last-child{
+    grid-row: 6 / span 1;
+    grid-column: 1 / span 2;
+  }
+  main article.about-project figure:last-child{
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  main article.about-project img{
+    grid-row: 8 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  main article.about-project h3:last-child{
+    grid-row: 9 / span 1;
+    grid-column: 1 / span 2;
+  }
 }

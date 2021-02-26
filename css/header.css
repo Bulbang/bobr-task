@@ -229,9 +229,6 @@ ul.nav-expanded li a span {
 
 /* TABLETS */
 @media screen and (min-width: 1024px) and (max-width: 1240px) {
-  :root{
-    --base: 3px
-  }
   
   header {
     position: relative;
@@ -271,4 +268,32 @@ ul.nav-expanded li a span {
 
 /* PHONES */
 @media screen and (max-width: 767px) {
+  header {
+    position: relative;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  header .header-content section.title{
+    margin-left: 40px;
+    grid-column: span 2;
+  }
+
+  header figure.boxes {
+    grid-column: span 2;
+  }
+
+  header figure.boxes img{
+    width: 100%;
+
+  }
+
+  .header-content ul.nav-regular{
+    display: none;
+  }
+
+  .nav-menu {
+    width: 50%;
+  }
 }

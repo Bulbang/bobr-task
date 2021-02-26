@@ -126,4 +126,7 @@ h2{
 
 /* PHONES */
 @media screen and (max-width: 767px) {
+  :root{
+    --base: 2px
+  }
 }
