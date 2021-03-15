@@ -70,3 +70,12 @@ footer img.footer-logo{
   align-self: flex-start;
 }
 
+@media screen and (max-width: 767px){
+  footer img.footer-logo{
+    display: none;
+  }
+
+  footer section{
+    grid-column: span 2;
+  }
+}

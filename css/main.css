@@ -34,7 +34,7 @@ main span {
 }
 
 main section {
-  margin-left: calc(var(--base) * 9);
+
   max-width: 500px;
 }
 
@@ -147,8 +147,8 @@ main article.short-info ul.instruct li {
   position: absolute;
   border: none;
   background: var(--f-blue);
-  width: 40px;
-  height: 40px;
+  width: calc(var(--base)*12);
+  height: calc(var(--base)*12);
   border-radius: 50%;
   margin-left: calc(var(--base) * -20);
   box-shadow: 2px 2px 8px rgba(20, 57, 87, 0.25);
@@ -215,14 +215,18 @@ main article.prizes ul.prize-list li:last-child {
 main article.prizes ul.prize-list li .circle {
   background-color: var(--f-white);
   margin-left: -60px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
 }
 
 main article.prizes ul.prize-list li .circle img {
   margin-left: calc(var(--base) / 4);
+  height: calc(var(--base)*8);
 }
+
+main article.prizes ul.prize-list li .circle img.problem {
+  width: calc(var(--base)*7) ;
+  margin-right: var(--base);
+}
+
 main article.prizes button {
   width: calc(var(--base) * 60);
   height: calc(var(--base) * 15);
@@ -254,7 +258,7 @@ main article.about-project {
 
   display: grid;
   grid-template-rows: auto 1fr auto auto 1fr auto auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main article.about-project h2 {
@@ -381,7 +385,7 @@ main article.vitamins .circle {
   color: var(--f-blue);
 }
 main article.vitamins img {
-  width: calc(var(--base) * 200);
+  width: calc(var(--base) * 150);
   align-self: center;
   justify-self: center;
 }
@@ -543,19 +547,12 @@ section.blog {
 
 /* TABLETS */
 @media screen and (min-width: 1025px) and (max-width: 1240px) {
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  main article.vitamins p.vitamins {
-    max-width: 450px;
+  html{
+    overflow-x: hidden;
   }
-  main article.about-project h3 {
-    max-width: 450px;
-  }
-}
 
-/* PHONES */
-@media screen and (max-width: 767px) {
+  
+
   main article.short-info {
     display: grid;
     grid-template-columns: none;
@@ -567,19 +564,20 @@ section.blog {
   }
 
   main article.short-info section {
-    margin-left: 0;
-    max-width: 320px;
-    justify-self: flex-start;
+    margin: 0 10px;
+    max-width: none;
+    justify-self: center;
     grid-row: 2 / span 1;
     grid-column: span 1;
   }
   main article.short-info figure {
-    justify-self: flex-start;
+    justify-self: center;
     grid-row: 3 / span 1;
     grid-column: span 1;
   }
   main article.short-info ul.socials {
-    justify-self: flex-start;
+    margin: 0 10px;
+    justify-self: center;
     grid-row: 4 / span 1;
     grid-column: span 1;
   }
@@ -587,6 +585,7 @@ section.blog {
   main article.prizes {
     padding-bottom: 0;
     background-image: none;
+    grid-template-rows: repeat(3, auto);
     background: linear-gradient(180deg, #649ee1 30.8%, #91c2ec 78.02%);
   }
   main article.prizes button {
@@ -595,6 +594,7 @@ section.blog {
 
   main article.prizes img.prize-box {
     display: block;
+    
   }
 
   main article.prizes ul.prize-list {
@@ -605,49 +605,494 @@ section.blog {
     max-width: 60%;
   }
 
+  main article.prizes ul.prize-list li{
+    width: auto;
+  }
+
   main article.about-project {
     grid-template-rows: repeat(9, auto);
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
     
   }
 
-  main article.about-project h2 {
-    grid-row: 1 / span 1;
-    grid-column: span 2;
-  }
-  main article.about-project section:first-child{
-    grid-row: 2 / span 1;
-    grid-column:1 / span 2
-  }
-  main article.about-project figure:first-child {
-    grid-row: 3 / span 1;
-    grid-column: 1 / span 2;
-  }
-  
-  main article.about-project h3:first-child{
-    grid-row: 4 / span 1;
-    grid-column: 1 / span 2;
-  }
-  main article.about-project iframe{
-    grid-row: 5 / span 1;
-    grid-column: 1 / span 2;
-  }
-  main article.about-project section:last-child{
-    grid-row: 6 / span 1;
-    grid-column: 1 / span 2;
-  }
-  main article.about-project figure:last-child{
-    grid-row: 7 / span 1;
-    grid-column: 1 / span 2;
+  main article.about-project section{
+    margin-left: 0;
   }
 
-  main article.about-project img{
-    grid-row: 8 / span 1;
-    grid-column: 1 / span 2;
+  main article.about-project h2 {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  main article.about-project section.first{
+    grid-row: 2;
+    grid-column:1 / span 1
+  }
+  main article.about-project figure.first {
+    grid-row: 3;
+    grid-column: 1 / span 1;
+  }
+  
+  main article.about-project h3{
+    grid-row: 4;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project iframe{
+    grid-row: 5;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project section.last{
+    grid-row: 6;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project figure.img-right{
+    grid-row: 7;
+    grid-column: 1 / span 1;
+  }
+
+  main article.about-project img.choise{
+    grid-row: 8;
+    grid-column: 1 / span 1;
   }
 
   main article.about-project h3:last-child{
-    grid-row: 9 / span 1;
+    grid-row: 9;
+    grid-column: 1 / span 1;
+  }
+
+  main article.buy-glow-1 {
+    background: #00467F;
+    padding-top: 50px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 0;
+  }
+  main article.buy-glow-1 button{
+    display: none;
+  }
+
+  main article.buy-glow-1 figure{
+    background-position: center bottom;
+    grid-row: 2;
+    
+    
+    margin-left: 10px;
+  }
+
+  main article.buy-glow-1 section{
+    
+    z-index: 100;
+  }
+
+  main article.buy-glow-1 section h3{
     grid-column: 1 / span 2;
+    text-align: center;
+  }
+
+
+  main article.buy-glow-2 button{
+    display: none;
+  }
+
+  main article.buy-glow-2 img.plus{
+    left: calc(var(--base)*3);
+    transform: translate(0, 0);
+  }
+
+  
+
+  main article.buy-glow-2 section {
+    max-width: none;
+  }
+
+  main article.buy-glow-2 section h3{
+    width: 320px;
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  main article.vitamins{
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+
+  main article.vitamins section{
+    grid-row: 3;
+  }
+
+  section.blog {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html{
+    overflow-x: hidden;
+  }
+
+  
+
+  main article.short-info {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  main article.short-info h2 {
+    grid-column: span 1;
+  }
+
+  main article.short-info section {
+    margin: 0 10px;
+    max-width: none;
+    justify-self: center;
+    grid-row: 2 / span 1;
+    grid-column: span 1;
+  }
+  main article.short-info figure {
+    justify-self: center;
+    grid-row: 3 / span 1;
+    grid-column: span 1;
+  }
+  main article.short-info ul.socials {
+    margin: 0 10px;
+    justify-self: center;
+    grid-row: 4 / span 1;
+    grid-column: span 1;
+  }
+
+  main article.prizes {
+    padding-bottom: 0;
+    background-image: none;
+    grid-template-rows: repeat(3, auto);
+    background: linear-gradient(180deg, #649ee1 30.8%, #91c2ec 78.02%);
+  }
+  main article.prizes button {
+    display: none;
+  }
+
+  main article.prizes img.prize-box {
+    display: block;
+    
+  }
+
+  main article.prizes ul.prize-list {
+    margin-left: 12vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 60%;
+  }
+
+  main article.prizes ul.prize-list li{
+    width: auto;
+  }
+
+  main article.about-project {
+    grid-template-rows: repeat(9, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+    
+  }
+
+  main article.about-project section{
+    margin-left: 0;
+  }
+
+  main article.about-project h2 {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  main article.about-project section.first{
+    grid-row: 2;
+    grid-column:1 / span 1
+  }
+  main article.about-project figure.first {
+    grid-row: 3;
+    grid-column: 1 / span 1;
+  }
+  
+  main article.about-project h3{
+    grid-row: 4;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project iframe{
+    grid-row: 5;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project section.last{
+    grid-row: 6;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project figure.img-right{
+    grid-row: 7;
+    grid-column: 1 / span 1;
+  }
+
+  main article.about-project img.choise{
+    grid-row: 8;
+    grid-column: 1 / span 1;
+  }
+
+  main article.about-project h3:last-child{
+    grid-row: 9;
+    grid-column: 1 / span 1;
+  }
+
+  main article.buy-glow-1 {
+    background: #00467F;
+    padding-top: 50px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 0;
+  }
+  main article.buy-glow-1 button{
+    display: none;
+  }
+
+  main article.buy-glow-1 figure{
+    background-position: center bottom;
+    grid-row: 2;
+    
+    
+    margin-left: 10px;
+  }
+
+  main article.buy-glow-1 section{
+    
+    z-index: 100;
+  }
+
+  main article.buy-glow-1 section h3{
+    grid-column: 1 / span 2;
+    text-align: center;
+  }
+
+
+  main article.buy-glow-2 button{
+    display: none;
+  }
+
+  main article.buy-glow-2 img.plus{
+    left: calc(var(--base)*3);
+    transform: translate(0, 0);
+  }
+
+  main article.buy-glow-2 figure img{
+    margin-top: 50%;
+    margin-left: 30%;
+  }
+
+  main article.buy-glow-2 section {
+    max-width: none;
+  }
+
+  main article.buy-glow-2 section h3{
+    width: 320px;
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  main article.vitamins{
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+
+  main article.vitamins section{
+    grid-row: 3;
+  }
+
+  section.blog {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10px;
+  }
+}
+
+/* PHONES */
+@media screen and (max-width: 767px) {
+  html{
+    overflow-x: hidden;
+  }
+
+
+
+  main article.short-info {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  main article.short-info h2 {
+    grid-column: span 1;
+  }
+
+  main article.short-info section {
+    margin-left: 10px;
+    max-width: 320px;
+    justify-self: center;
+    grid-row: 2 / span 1;
+    grid-column: span 1;
+  }
+  main article.short-info figure {
+    justify-self: center;
+    grid-row: 3 / span 1;
+    grid-column: span 1;
+  }
+  main article.short-info ul.socials {
+    justify-self: center;
+    margin-left: 10px;
+    grid-row: 4 / span 1;
+    grid-column: span 1;
+  }
+
+  main article.prizes {
+    padding-bottom: 0;
+    background-image: none;
+    grid-template-rows: repeat(3, auto);
+    background: linear-gradient(180deg, #649ee1 30.8%, #91c2ec 78.02%);
+  }
+  main article.prizes button {
+    display: none;
+  }
+
+  main article.prizes img.prize-box {
+    display: block;
+    
+  }
+
+  main article.prizes ul.prize-list {
+    margin-left: 12vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 60%;
+  }
+
+  main article.prizes ul.prize-list li{
+    width: auto;
+  }
+
+  main article.about-project {
+    grid-template-rows: repeat(9, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+    
+  }
+
+  main article.about-project section{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  main article.about-project h2 {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  main article.about-project section.first{
+    grid-row: 2;
+    grid-column:1 / span 1
+  }
+  main article.about-project figure.first {
+    grid-row: 3;
+    grid-column: 1 / span 1;
+  }
+  
+  main article.about-project h3{
+    grid-row: 4;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project iframe{
+    grid-row: 5;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project section.last{
+    grid-row: 6;
+    grid-column: 1 / span 1;
+  }
+  main article.about-project figure.img-right{
+    grid-row: 7;
+    grid-column: 1 / span 1;
+  }
+
+  main article.about-project img.choise{
+    grid-row: 8;
+    grid-column: 1 / span 1;
+  }
+
+  main article.about-project h3:last-child{
+    grid-row: 9;
+    grid-column: 1 / span 1;
+  }
+
+  main article.buy-glow-1 {
+    background: #00467F;
+    padding-top: 50px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+  main article.buy-glow-1 button{
+    display: none;
+  }
+
+  main article.buy-glow-1 figure{
+    background-position: center bottom;
+    grid-row: 2;
+    
+    
+    margin-left: 10px;
+  }
+
+  main article.buy-glow-1 section{
+    
+    z-index: 100;
+  }
+
+  main article.buy-glow-1 section h3{
+    grid-column: 1 / span 2;
+    text-align: center;
+  }
+
+
+
+  main article.buy-glow-2 button{
+    display: none;
+  }
+
+  main article.buy-glow-2 img.plus{
+    left: calc(var(--base)*3);
+    transform: translate(0, 0);
+  }
+
+  main article.buy-glow-2 figure img{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 50vw;
+  }
+
+  main article.buy-glow-2 section {
+    max-width: none;
+  }
+
+  main article.buy-glow-2 section h3{
+    width: 320px;
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  main article.vitamins{
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+
+  main article.vitamins section{
+    grid-row: 3;
+  }
+
+  section.blog {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+    margin-right: 0;
   }
 }

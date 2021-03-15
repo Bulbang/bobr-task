@@ -48,7 +48,7 @@ ul.nav-regular li:last-child {
 }
 
 .main-menu {
-  text-align: center;
+  margin-left: calc(var(--base)*25);
   grid-row: 1;
 }
 
@@ -125,8 +125,8 @@ aside.open {
 }
 
 .nav-menu {
-  width: 38%;
-  height: 74%;
+  width: calc(var(--base) * 180);
+  height: calc(var(--base) * 180);
   background-image: url(".././img/nav-bg-ellipse.svg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
@@ -186,7 +186,7 @@ aside.hide .nav-menu {
 }
 
 figure.exit {
-  width: 200px;
+  width: calc(var(--base)*50);
   text-align: center;
 }
 
@@ -264,6 +264,34 @@ ul.nav-expanded li a span {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    position: relative;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  header .header-content section.title{
+    margin-left: 40px;
+    grid-column: span 2;
+  }
+
+  header figure.boxes {
+    grid-column: span 2;
+  }
+
+  header figure.boxes img{
+    width: 100%;
+
+  }
+
+  .header-content ul.nav-regular{
+    display: none;
+  }
+
+  .nav-menu{
+    width: 100%;
+  }
 }
 
 /* PHONES */
@@ -293,7 +321,8 @@ ul.nav-expanded li a span {
     display: none;
   }
 
-  .nav-menu {
-    width: 50%;
+  .nav-menu{
+    width: 100%;
   }
+
 }
